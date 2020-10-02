@@ -1,0 +1,14 @@
+
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+
+<h1>{{ blog_post.title }}</h1>
+
+<!-- where the 'S' adds the 'th' or the 'nd', or the 'rd' to the number -->
+<h2>-- {{ blog_post.date|date:'F jS Y' }} --</h2>
+
+{{ blog_post.description|safe }}
+
+{% endblock %}
