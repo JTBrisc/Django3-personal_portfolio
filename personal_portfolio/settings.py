@@ -15,7 +15,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Create the path to 'media' folder starting from the BASE_DIR 
+# Create the path to 'media' folder starting from the BASE_DIR
 # ????
 
 # Quick-start development settings - unsuitable for production
@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '6xq%c^ma#6st744su5_30c+oz@q&t*7^9qn+ih+zjfe&w82%4_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jbrisc.pythonanywhere.com']
 
 
 # Application definition
@@ -120,13 +120,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
+
 
 # This tells at which URL the media of the website will be visible
 MEDIA_URL = '/media/'
 
-# This specifies where should we save all the media files, considering the 
-# different apps that are in the project: so take what ever the BASE 
+# This specifies where should we save all the media files, considering the
+# different apps that are in the project: so take what ever the BASE
 # directory is and add 'media' to it
 MEDIA_ROOT = BASE_DIR / 'media'
