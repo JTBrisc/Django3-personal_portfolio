@@ -131,3 +131,8 @@ MEDIA_URL = '/media/'
 # different apps that are in the project: so take what ever the BASE
 # directory is and add 'media' to it
 MEDIA_ROOT = BASE_DIR / 'media'
+
+try:
+    from . local_settings import *
+except ImportError:
+    print("Looks like no local file. You must be on Production.")
